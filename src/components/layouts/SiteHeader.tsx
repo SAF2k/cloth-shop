@@ -1,6 +1,7 @@
-import MainNav from "@/components/layouts/MainNav";
 import { siteConfig } from "@/config/site";
-
+import MainNav from "@/components/layouts/MainNav";
+import ThemeToggle from "@/components/layouts/ThemeToggle";
+import Combobox from "../Combobox";
 interface SiteHeaderProps {
   user: string;
 }
@@ -11,7 +12,12 @@ export default function SiteHeader({ user }: SiteHeaderProps) {
       <div className="container flex items-center h-16">
         <MainNav items={siteConfig.mainNav} />
       </div>
-      
+      <div className="flex flex-1 items-center justify-end space-x-4">
+        <nav className="flex items-center space-x-2">
+          <Combobox />
+          <ThemeToggle />
+        </nav>
+      </div>
     </header>
   );
 }

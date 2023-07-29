@@ -19,12 +19,16 @@ interface MainNavProps {
 export default function MainNav({ items }: MainNavProps) {
   return (
     <div className="hidden gap-6 lg:flex">
+
+      {/* LOGO OF THE SITE  */}
       <Link href="/" className="hidden items-center space-x-2 lg:flex">
         <Icons.logo />
         <span className="hidden font-bold lg:inline-block">
           {siteConfig.name}
         </span>
       </Link>
+
+      {/* RIGHT SIDE OF THE NAVIGATION BAR  */}
       <NavigationMenu>
         <NavigationMenuList>
           {items?.[0]?.items ? (
@@ -47,6 +51,8 @@ export default function MainNav({ items }: MainNavProps) {
           ) : null}
         </NavigationMenuList>
       </NavigationMenu>
+
+      {/* LEFT SIDE OF THE NAVIGATION BAR  */}
     </div>
   );
 }
