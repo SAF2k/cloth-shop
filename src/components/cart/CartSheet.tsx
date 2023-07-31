@@ -23,7 +23,7 @@ const CartSheet = async () => {
                         variant="secondary"
                         className="absolute -top-2 -right-2 w-6 h-5 rounded-full p-2"
                     >
-                        {itemsCount}
+                        {itemsCount}  
                     </Badge>
                 )}
                 <Icons.cart className="w-4 h-4" aria-hidden="true"/>
