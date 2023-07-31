@@ -1,7 +1,8 @@
 import { siteConfig } from "@/config/site";
 import MainNav from "@/components/layouts/MainNav";
 import ThemeToggle from "@/components/layouts/ThemeToggle";
-import Combobox from "../Combobox";
+import Combobox from "@/components/Combobox";
+import CartSheet from "@/components/cart/CartSheet";
 interface SiteHeaderProps {
   user: string;
 }
@@ -15,6 +16,7 @@ export default function SiteHeader({ user }: SiteHeaderProps) {
       <div className="flex flex-1 items-center justify-end space-x-4">
         <nav className="flex items-center space-x-2">
           <Combobox />
+          <CartSheet />
           <ThemeToggle />
         </nav>
       </div>
